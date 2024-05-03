@@ -1,0 +1,21 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.factorypath
+bin/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test reports
+app/my-reports/
+app/build/
