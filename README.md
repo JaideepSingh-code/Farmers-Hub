@@ -86,6 +86,63 @@ Put a breakpoint in the code and then run the gradle debug task.
     ./gradlew debug
 ```
 
+## Project Structure
+
+```
+Farmers-Hub/
+├── app/
+│   ├── build.gradle                         # Gradle build config
+│   └── src/
+│       ├── main/java/
+│       │   ├── controllers/
+│       │   │   ├── ItemController.java      # Item CRUD operations
+│       │   │   ├── LoginController.java     # Authentication logic
+│       │   │   ├── OrderController.java     # Order processing
+│       │   │   ├── RegistrationController.java
+│       │   │   └── ReviewController.java    # Rating & review handling
+│       │   ├── models/
+│       │   │   ├── Customer.java            # Customer entity
+│       │   │   ├── Farmer.java              # Farmer entity
+│       │   │   ├── Item.java                # Base item class
+│       │   │   ├── Machine.java             # Machine listing
+│       │   │   ├── Produce.java             # Produce listing
+│       │   │   ├── User.java                # Base user class
+│       │   │   ├── OrderItem.java           # Order line items
+│       │   │   ├── RatingAndReview.java     # Review entity
+│       │   │   └── composite_responses/
+│       │   │       └── ItemWithReviews.java # Item + reviews DTO
+│       │   ├── repositories/
+│       │   │   ├── itemRepository/          # Interface + Mock + Postgres impl
+│       │   │   ├── orderItemRepository/     # Interface + Mock + Postgres impl
+│       │   │   ├── reviewRepository/        # Interface + Mock + Postgres impl
+│       │   │   └── userRepository/          # Interface + Mock + Postgres impl
+│       │   ├── services/
+│       │   │   ├── ItemService.java         # Item business logic
+│       │   │   ├── OrderService.java        # Order business logic
+│       │   │   ├── RatingAndReviewService.java
+│       │   │   └── UserService.java         # User business logic
+│       │   ├── statics/
+│       │   │   ├── DbConfig.java            # DB connection config
+│       │   │   ├── ItemStatics.java         # Item constants
+│       │   │   └── UserRoles.java           # Role definitions
+│       │   ├── utils/
+│       │   │   ├── AlertUtils.java          # UI alert helpers
+│       │   │   └── ValidationUtils.java     # Input validation
+│       │   ├── views/
+│       │   │   ├── LoginView.java           # Login UI
+│       │   │   ├── RegistrationPageView.java
+│       │   │   └── UpdateProfilePage.java   # Profile management UI
+│       │   └── team1/project/
+│       │       └── ApplicationRunner.java   # Application entry point
+│       ├── intTest/java/app/
+│       │   └── UserServiceIntegTest.java    # Integration tests
+│       └── test/                            # Unit tests
+├── gradle/wrapper/                          # Gradle wrapper
+├── gradlew, gradlew.bat                     # Build scripts
+├── settings.gradle
+└── README.md
+```
+
 ## Screenshots
 
 ### Login and Registration Page
